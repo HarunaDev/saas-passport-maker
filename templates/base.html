@@ -8,7 +8,7 @@
 </head>
 <body>
     <!-- NavBar -->
-    <nav>
+    <nav class="nav-bar" id="home">
         <h1 class="logo">
             <a href="{{ url_for('index') }}">Logo</a>
         </h1>
@@ -18,7 +18,7 @@
     <!-- NavBar end -->
     
     <!-- Main Section -->
-    <main>
+    <main id="main">
     {% block main %}{% endblock %}
     </main>
     <!-- Main Section end -->
