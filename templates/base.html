@@ -10,7 +10,7 @@
     <!-- NavBar -->
     <nav class="nav-bar" id="home">
         <h1 class="logo">
-            <a href="{{ url_for('index') }}">Logo</a>
+            <a href="{{ url_for('index') }}">LOGO</a>
         </h1>
         
         {% block navLinks %}{% endblock %}
@@ -18,10 +18,21 @@
     <!-- NavBar end -->
     
     <!-- Main Section -->
-    <main id="main">
+    <main id="main" class="page-wrapper">
     {% block main %}{% endblock %}
     </main>
     <!-- Main Section end -->
+
+    <!-- Footer Section -->
+     <footer id="footer" class="footer-section">
+        <div class="line"></div>
+
+        <div class="footer-bottom">
+            <h3 class="footer-logo">LOGO</h3>
+            <small>&copy; name2024 rights reserved</small>
+        </div>
+     </footer>
+    <!-- Footer Section end -->
 
 </body>
 </html>
