@@ -9,13 +9,11 @@
 <body>
     <!-- NavBar -->
     <nav>
-        <h1 class="logo">logo</h1>
+        <h1 class="logo">
+            <a href="{{ url_for('index') }}">Logo</a>
+        </h1>
         
-        <ul class="nav-links">
-        <li>About</li>
-        <li>Product</li>
-        <li>Help</li>
-        </ul>
+        {% block navLinks %}{% endblock %}
     </nav>
     <!-- NavBar end -->
     

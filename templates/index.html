@@ -2,6 +2,20 @@
 
 {% block title %}Home{% endblock %}
 
+{% block navLinks %} 
+    <ul class="nav-links">
+        <li>
+            <a href="{{ url_for('about') }}">About</a>
+        </li>
+        <li>
+            <a href="{{ url_for('upload') }}">Product</a>
+        </li>
+        <li>
+            <a href="{{ url_for('help') }}">Help</a>
+        </li>
+    </ul>
+{% endblock %}
+
 {% block main %}
     <h1>Hello from home</h1>
 {% endblock %}
