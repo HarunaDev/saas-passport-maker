@@ -65,18 +65,43 @@ body{
 
 /* mainWrapper styling */
 .page-wrapper{
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     margin-top: 70px;
     min-height: 100%;
     min-width: 100%;
 }
+
+/* Home (Banner Section) */
+
+/* Home (Banner Section) end */
 /* mainWrapper styling end */
 
 /* footer styling */
 .footer-section{
-    border: 1px solid red;
+    /* border: 1px solid red; */
     min-height: 100px;
     width: 100%;
     position: relative;
+    padding: var(--global-padding);
+}
+
+.footer-section .line {
+    margin: 30px auto 10px;
+    height: 5px;
+    background-color: var(--secondary-color);
+}
+
+.footer-section .footer-bottom{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.footer-bottom .footer-logo{
+    color: var(--dark-blue);
+}
+
+.footer-bottom small {
+    color: var(--text-dark);
 }
 /* footer styling end */
