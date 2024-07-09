@@ -20,6 +20,7 @@ body{
     --text-light: #fff;
     --dark-blue: #185AE7;
     --global-padding: 10px 60px;
+    --btn-padding: 10px 20px;
 }
 
 /* navBar styling */
@@ -72,7 +73,49 @@ body{
 }
 
 /* Home (Banner Section) */
+#banner {
+    /* border: 1px solid red; */
+    height: 600px;
+    padding: var(--global-padding);
+    display: flex;
+    justify-content: space-around;
+}
 
+#banner .left, .right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#banner .left{
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#banner .right{
+    align-items: center;
+}
+
+#banner .banner-text{
+    font-size: 48px;
+    color: var(--text-dark);
+
+}
+
+#banner .cta-btn{
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    padding: var(--btn-padding);
+    border-radius: 15px;
+    color: var(--text-light);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#banner .right svg{
+    width: 350px;
+}
 /* Home (Banner Section) end */
 /* mainWrapper styling end */
 
