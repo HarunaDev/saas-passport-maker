@@ -3,3 +3,16 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --primary-color: #3C75EF;
+    --secondary-color: #F2B93F;
+    --text-dark: #444;
+    --text-light: #fff;
+    --dark-blue: #185AE7;
+    --global-padding: 50px 10px;
+}
+
+/* navBar styling */
+
+/* navBar styling end */
