@@ -9,17 +9,17 @@ def index():
 
 # About route
 @app.route("/about")
-def index():
+def about():
     return render_template("about.html")
 
 # Product route 
 @app.route("/product")
-def index():
+def upload():
     return render_template("upload.html")
 
 # Help route
 @app.route("/help")
-def index():
+def help():
     return render_template("help.html")
 
 if __name__ == '__main__':
