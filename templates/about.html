@@ -1,7 +1,24 @@
 {% extends "base.html" %}
 
+<!-- title block -->
 {% block title %}About{% endblock %}
 
+<!-- navLinks block -->
+{% block navLinks %} 
+    <ul class="nav-links">
+        <li>
+            About
+        </li>
+        <li>
+            <a href="{{ url_for('upload') }}">Product</a>
+        </li>
+        <li>
+            <a href="{{ url_for('help') }}">Help</a>
+        </li>
+    </ul>
+{% endblock %}
+
+<!-- main block -->
 {% block main %}
     <h1>Hello from About page</h1>
 {% endblock %}
