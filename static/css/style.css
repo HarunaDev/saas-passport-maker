@@ -9,6 +9,10 @@
     font-family: "Poppins", sans-serif;
 }
 
+body{
+    height: 100vh;
+}
+
 :root {
     --primary-color: #3C75EF;
     --secondary-color: #F2B93F;
@@ -21,6 +25,7 @@
 /* navBar styling */
 .nav-bar{
     /* border: 1px solid red; */
+    background-color: var(--text-light);
     width: 100%;
     height: 70px;
     padding: var(--global-padding);
@@ -28,6 +33,8 @@
     justify-content: space-between;
     align-items: center;
     position: fixed;
+    top: 0;
+    left: 0;
 }
 
 .logo {
@@ -55,3 +62,21 @@
 }
 
 /* navBar styling end */
+
+/* mainWrapper styling */
+.page-wrapper{
+    border: 1px solid blue;
+    margin-top: 70px;
+    min-height: 100%;
+    min-width: 100%;
+}
+/* mainWrapper styling end */
+
+/* footer styling */
+.footer-section{
+    border: 1px solid red;
+    min-height: 100px;
+    width: 100%;
+    position: relative;
+}
+/* footer styling end */
