@@ -72,17 +72,25 @@ body{
     min-width: 100%;
 }
 
+.cta-btn{
+    padding: var(--btn-padding);
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
 /* Home (Banner Section) */
 #banner {
     /* border: 1px solid red; */
     height: 600px;
     padding: var(--global-padding);
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 #banner .left, .right{
-    width: 50%;
+    width: 35%;
     display: flex;
     justify-content: center;
 }
@@ -106,17 +114,40 @@ body{
 #banner .cta-btn{
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
-    padding: var(--btn-padding);
-    border-radius: 15px;
     color: var(--text-light);
-    font-size: 18px;
-    font-weight: 500;
 }
 
 #banner .right svg{
     width: 350px;
 }
 /* Home (Banner Section) end */
+
+/* Home Section */
+.home-section{
+    /* border: 1px solid red; */
+    height: 300px;
+    background-color: var(--primary-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.home-section .section-text {
+    font-size: 30px;
+    color: var(--text-light);
+    width: 50%;
+    /* margin-bottom: 20px; */
+}
+
+.home-section .cta-btn{
+    background-color: var(--text-light);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+}
+/* Home Section end */
 /* mainWrapper styling end */
 
 /* footer styling */
