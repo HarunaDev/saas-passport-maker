@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+/* utility style */
 * {
     margin: 0;
     padding: 0;
@@ -10,7 +11,7 @@
 }
 
 body{
-    height: 100vh;
+    height: 85dvh;
 }
 
 :root {
@@ -21,7 +22,17 @@ body{
     --dark-blue: #185AE7;
     --global-padding: 10px 60px;
     --btn-padding: 10px 20px;
+    --banner-height: 600px;
+    --banner-text: 48px;
 }
+
+.cta-btn{
+    padding: var(--btn-padding);
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+/* utility style end */
 
 /* navBar styling */
 .nav-bar{
@@ -61,7 +72,6 @@ body{
 .nav-links li a{
     color: var(--dark-blue);
 }
-
 /* navBar styling end */
 
 /* mainWrapper styling */
@@ -71,18 +81,13 @@ body{
     min-height: 100%;
     min-width: 100%;
 }
+/* mainWrapper styling end */
 
-.cta-btn{
-    padding: var(--btn-padding);
-    border-radius: 15px;
-    font-size: 18px;
-    font-weight: 500;
-}
-
+/* Home Page */
 /* Home (Banner Section) */
 #banner {
     /* border: 1px solid red; */
-    height: 600px;
+    height: var(--banner-height);
     padding: var(--global-padding);
     display: flex;
     justify-content: space-evenly;
@@ -106,7 +111,7 @@ body{
 }
 
 #banner .banner-text{
-    font-size: 48px;
+    font-size: var(--banner-text);
     color: var(--text-dark);
 
 }
@@ -148,7 +153,43 @@ body{
     color: var(--primary-color);
 }
 /* Home Section end */
-/* mainWrapper styling end */
+/* Home Page end*/
+
+/* Upload Page */
+#upload {
+    height: var(--banner-height);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: var(--global-padding);
+}
+
+#upload .upload-text{
+    font-size: var(--banner-text);
+    color: var(--text-light);
+    width: 50%;
+    text-align: center;
+}
+
+#upload .cta-btn{
+    background-color: var(--text-light);
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    margin-bottom: 40px;
+}
+
+#upload .tc{
+    color: var(--text-light);
+}
+
+#upload .tc a{
+    color: var(--text-light);
+    text-decoration: underline;
+}
+/* Upload Page end */
 
 /* footer styling */
 .footer-section{
