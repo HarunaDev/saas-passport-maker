@@ -17,6 +17,11 @@ def about():
 def upload():
     return render_template("upload.html")
 
+# Product route 
+@app.route("/removed")
+def removed():
+    return render_template("removed.html")
+
 # Help route
 @app.route("/help")
 def help():
