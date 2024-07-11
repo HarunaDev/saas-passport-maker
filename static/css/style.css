@@ -94,7 +94,7 @@ body{
     align-items: center;
 }
 
-#banner .left, .right{
+#banner .left, #banner .right{
     width: 35%;
     display: flex;
     justify-content: center;
@@ -191,6 +191,74 @@ body{
     text-decoration: underline;
 }
 /* Upload Page end */
+
+/* Removed Page */
+#removed {
+    /* border: 1px solid red; */
+    height: var(--banner-height);
+    background-color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+#removed .left, #removed .right{
+    /* border: 1px solid blue; */
+    width: 35%;
+}
+
+#removed .left {
+    position: relative;
+    height: 80%;
+    padding: 50px;
+}
+
+#removed .removed {
+    border: 1px solid var(--text-dark);
+    height: 100%;
+    width: 100%;
+}
+
+#removed .bt{
+    position: absolute;
+    top: 45px;
+    right: 30px;
+}
+
+#removed .yt{
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+
+#removed .yb{
+    position: absolute;
+    bottom: 50px;
+    right: 20px;
+}
+
+#removed .bb{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+#removed .right{
+    text-align: center;
+}
+
+#removed .cta-btn{
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: 1px solid var(--primary-color);
+    margin-bottom: 20px;
+}
+
+#removed .img-text{
+    color: var(--text-dark);
+}
+/* Removed Page end */
 
 /* footer styling */
 .footer-section{
