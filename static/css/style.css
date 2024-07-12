@@ -260,6 +260,49 @@ body{
 }
 /* Removed Page end */
 
+/* About Page */
+/* About Banner */
+#about-banner {
+    /* border: 1px solid red; */
+    height: var(--banner-height);
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    padding: var(--global-padding);
+}
+
+#about-banner .banner-text{
+    text-align: center;
+    width: 50%;
+    font-size: var(--banner-text);
+    color: var(--text-light);
+    margin-bottom: 20px;
+}
+
+#about-banner .cta-btn{
+    background-color: var(--text-light);
+    border: 1px solid var(--text-light);
+    color: var(--primary-color);
+}
+
+#about-banner .tc{
+    text-align: center;
+    color: var(--text-light);
+}
+
+#about-banner .tc a{
+    color: var(--text-light);
+    text-decoration: underline;
+}
+/* About Banner end */
+
+
+
+/* About Page end */
+
 /* footer styling */
 .footer-section{
     /* border: 1px solid red; */
