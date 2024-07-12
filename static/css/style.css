@@ -299,7 +299,51 @@ body{
 }
 /* About Banner end */
 
+/* About Section */
+#about-section {
+    /* border: 1px solid red; */
+    height: var(--banner-height);
+    background-color: var(--text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--global-padding);
+    gap: 150px;
+}
 
+#about-section .left, #about-section .right {
+    height: 350px;
+    width: 400px;
+    /* border: 1px solid blue; */
+}
+
+#about-section .left{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 30px;
+}
+
+#about-section .section-text{
+    font-size: 36px;
+    color: var(--text-dark);
+}
+
+#about-section .cta-btn{
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    border: 1px solid var(--primary-color);
+}
+
+#about-section .right{
+    padding-top: 10px;
+    border: 3px solid var(--text-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* About Section */
 
 /* About Page end */
 
