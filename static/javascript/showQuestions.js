@@ -20,5 +20,13 @@ function showQuestions() {
         }
     ];
 
-
+    // create container div with header and append it to section
+    const questions = document.createElement('div')
+    questions.setAttribute('class', 'questions')
+    questions.innerHTML = `
+    <h1 class="faq-header">Frequently Asked Questions</h1>
+    `;
+    faq.appendChild(questions);
 }
+
+showQuestions()
