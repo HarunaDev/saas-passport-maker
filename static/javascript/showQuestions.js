@@ -27,6 +27,12 @@ function showQuestions() {
     <h1 class="faq-header">Frequently Asked Questions</h1>
     `;
     faq.appendChild(questions);
+
+    // create question section wrapper and append it to container div
+    const question_section = document.createElement('div')
+    question_section.setAttribute('class', 'question-section')
+    question_section.innerHTML = '';
+    questions.appendChild(question_section);
 }
 
 showQuestions()
