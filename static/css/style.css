@@ -400,6 +400,98 @@ body{
 
 /* About Page end */
 
+/* Help Page */
+
+/* FAQ Section */
+#FAQ {
+    height: 100%;
+    background-color: var(--secondary-color);
+    padding: var(--global-padding);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#FAQ .faq-header {
+    color: var(--text-light);
+    font-size: var(--banner-text);
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#FAQ .question-section {
+    width: 100%;
+    height: 100%;
+}
+
+#FAQ .question {
+    border: 2px solid var(--text-dark);
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+#FAQ .question-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-transform: capitalize;
+    padding-bottom: 20px;
+}
+
+.question-title p {
+    font-size: 24px;
+    color: var(--text-dark);
+}
+
+#FAQ .question-btn{
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    color: var(--text-dark);
+    transition: ease-in;
+}
+
+/* #FAQ .question-btn:hover {
+    transform: rotate(90deg);
+} */
+
+#FAQ .question-text {
+    padding: 15px 0 15px;
+    border-top: 1px solid var(--text-dark);
+}
+
+#FAQ .question-text p {
+    color: #333;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+/* hide text */
+.question-text {
+    display: none;
+}
+
+.show-text .question-text{
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
+
+.show-text .minus-icon{
+    display: inline;
+}
+
+.show-text .plus-icon{
+    display: none;
+}
+/* FAQ Section end */
+
+/* Help Page end */
+
 /* footer styling */
 .footer-section{
     /* border: 1px solid red; */
