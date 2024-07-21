@@ -428,7 +428,7 @@ body{
     width: 50%;
     border-radius: 5px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 0 20px;
 }
 
@@ -437,7 +437,7 @@ body{
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
-    padding-bottom: 20px;
+    padding: 20px;
 }
 
 .question-title p {
@@ -450,12 +450,12 @@ body{
     border-color: transparent;
     cursor: pointer;
     color: var(--text-dark);
-    transition: ease-in;
+    transition: ease;
 }
 
-/* #FAQ .question-btn:hover {
+#FAQ .question-btn:hover {
     transform: rotate(90deg);
-} */
+}
 
 #FAQ .question-text {
     padding: 15px 0 15px;
