@@ -89,6 +89,22 @@ function showQuestions() {
   
   
       });
+
+      // question toggle
+      const question_article = document.querySelectorAll(".question");
+
+      question_article.forEach(function (fold) {
+        const btn = fold.querySelector(".question-btn");
+
+        btn.addEventListener("click", function (){
+            question_article.forEach(function (item) {
+                if (item !== fold) {
+                    item.classList.remove("show-text")
+                }
+            })
+            fold.classList.toggle("show-text");
+        })
+      })
 }
 
 showQuestions()
