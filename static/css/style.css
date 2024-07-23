@@ -21,9 +21,12 @@ body{
     --text-light: #fff;
     --dark-blue: #185AE7;
     --global-padding: 10px 60px;
+    --global-padding-tab: 10px 40px;
+    --global-padding-mobile: 10px 20px;
     --btn-padding: 10px 20px;
     --banner-height: 600px;
     --banner-text: 48px;
+    --banner-text-mobile: 40px;
 }
 
 .cta-btn{
@@ -81,9 +84,14 @@ body{
 
 /* navBar media-query */
 @media screen and (max-width: 600px) {
+    .nav-bar {
+        padding: var(--global-padding-mobile);
+    }
+
     .burger {
         display: block;
         z-index: 1;
+        cursor: pointer;
     }
 
     .burger .line {
@@ -124,7 +132,6 @@ body{
 
 /* mainWrapper styling */
 .page-wrapper{
-    /* border: 1px solid blue; */
     margin-top: 70px;
     min-height: 100%;
     min-width: 100%;
@@ -134,7 +141,6 @@ body{
 /* Home Page */
 /* Home (Banner Section) */
 #banner {
-    /* border: 1px solid red; */
     height: var(--banner-height);
     padding: var(--global-padding);
     display: flex;
@@ -161,7 +167,6 @@ body{
 #banner .banner-text{
     font-size: var(--banner-text);
     color: var(--text-dark);
-
 }
 
 #banner .cta-btn{
@@ -177,7 +182,6 @@ body{
 
 /* Home Section */
 .home-section{
-    /* border: 1px solid red; */
     height: 300px;
     background-color: var(--primary-color);
     text-align: center;
@@ -192,7 +196,6 @@ body{
     font-size: 30px;
     color: var(--text-light);
     width: 50%;
-    /* margin-bottom: 20px; */
 }
 
 .home-section .cta-btn{
@@ -201,6 +204,79 @@ body{
     color: var(--primary-color);
 }
 /* Home Section end */
+
+/* Home media-query */
+@media screen and (max-width: 960px) {
+    #banner {
+        height: 100%;
+        padding: var(--global-padding-tab);
+        padding-top: 100px;
+        padding-bottom: 100px;
+        gap: 150px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #banner .left, #banner .right{
+        width: 600px;
+    }
+    
+    #banner .left{
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+    }
+    
+    #banner .right svg{
+        width: 250px;
+        height: 100%;
+    }
+
+    .home-section{
+        height: 100%;
+        padding: var(--global-padding-tab);
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .home-section .section-text {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #banner {
+        padding: var(--global-padding-mobile);
+        padding-top: 50px;
+        padding-bottom: 50px;
+        gap: 100px;
+    }
+
+    #banner .left, #banner .right{
+        width: 100%;
+    }
+
+    #banner .banner-text{
+        font-size: var(--banner-text-mobile);
+    }
+    
+    #banner .right svg{
+        width: 250px;
+        height: 100%;
+    }
+
+    .home-section{
+        padding: var(--global-padding-mobile);
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    .home-section .section-text {
+        font-size: 28px;
+        width: 100%;
+    }
+}
+/* Home media-query end*/
 /* Home Page end*/
 
 /* Upload Page */
