@@ -617,7 +617,6 @@ body{
 
 /* footer styling */
 .footer-section{
-    /* border: 1px solid red; */
     min-height: 100px;
     width: 100%;
     position: relative;
@@ -643,4 +642,18 @@ body{
 .footer-bottom small {
     color: var(--text-dark);
 }
+
+/* footer media-query */
+@media screen and (max-width: 960px) {
+    .footer-section{
+        padding: var(--global-padding-tab);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .footer-section{
+        padding: var(--global-padding-mobile);
+    }
+}
+/* footer media-query end */
 /* footer styling end */
