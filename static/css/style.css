@@ -314,6 +314,36 @@ body{
     color: var(--text-light);
     text-decoration: underline;
 }
+
+/* Upload media-query */
+@media screen and (max-width: 1080px) {
+    #upload {
+        padding: var(--global-padding-tab);
+    }
+
+    #upload .upload-text{
+        font-size: var(--banner-text);
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #upload {
+        padding: var(--global-padding-mobile);
+    }
+
+    #upload .upload-text{
+        font-size: 40px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #upload .upload-text{
+        font-size: 36px;
+    }
+}
+/* Upload media-query end */
 /* Upload Page end */
 
 /* Removed Page */
