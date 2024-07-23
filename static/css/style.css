@@ -679,20 +679,21 @@ body{
     display: none;
 }
 
-/* Questions media query */
+/* FAQ media-query */
 @media only screen and (max-width: 960px) {
     #FAQ .question {
       width: 70%;
     }
-  }
-  @media only screen and (max-width: 600px) {
+}
+@media only screen and (max-width: 600px) {
     #FAQ .faq-header  { 
       font-size: 30px;
     }
     #FAQ .question {
       width: 100%;
     }
-  }
+}
+/* FAQ media-query */
 /* FAQ Section end */
 
 /* Help Page end */
