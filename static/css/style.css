@@ -588,10 +588,80 @@ body{
 }
 /* About Testimonials Section end */
 
+/* About media-query */
+@media screen and (max-width: 1080px) {
+    #about-banner {
+    padding: var(--global-padding-tab);
+    }
+    
+    #about-banner .banner-text{
+    width: 70%;
+    font-size: 42px;
+    }
+
+    #about-section {
+    /* height: var(--banner-height); */
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: var(--global-padding-tab);
+    gap: 50px;
+    }
+
+    #about-section .left, #about-section .right {
+        height: 350px;
+        width: 50%;
+        /* border: 1px solid blue; */
+    }
+}
+
+@media screen and (max-width: 760px) {
+    #about-section {
+        height: 100%;
+        flex-direction: column;
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+
+    #about-section .left, #about-section .right {
+        width: 70%;
+        height: 350px;
+    }
+
+    #about-section .left{
+        align-items: center;
+        gap: 50px;
+    }
+
+    #about-section .section-text{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #about-banner {
+    padding: var(--global-padding-mobile);
+    }
+    
+    #about-banner .banner-text{
+    width: 100%;
+    font-size: 36px;
+    }
+
+    #about-section {
+        padding: var(--global-padding-mobile);
+        padding-top: 20px;
+        padding-bottom: 80px;
+    }
+
+    #about-section .left, #about-section .right {
+        width: 100%;
+    }
+}
+/* About media-query end */
+
 /* About Page end */
 
 /* Help Page */
-
 /* FAQ Section */
 #FAQ {
     height: 100%;
@@ -685,10 +755,12 @@ body{
       width: 70%;
     }
 }
+
 @media only screen and (max-width: 600px) {
     #FAQ .faq-header  { 
-      font-size: 30px;
+      font-size: 36px;
     }
+
     #FAQ .question {
       width: 100%;
     }
