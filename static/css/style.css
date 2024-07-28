@@ -15,8 +15,8 @@ body{
 }
 
 :root {
-    --primary-color: #3C75EF;
-    --secondary-color: #F2B93F;
+    --primary-color: #3c75ef;
+    --secondary-color: #f2b93f;
     --text-dark: #444;
     --text-light: #fff;
     --dark-blue: #185AE7;
@@ -634,6 +634,16 @@ body{
 
     #about-section .section-text{
         text-align: center;
+    }
+
+    #about-testimonial {
+        padding: var(--global-padding-tab);
+    }
+
+    #about-testimonial .testimonials{
+        height: 350px;
+        gap: 50px;
+        /* flex-wrap: wrap; */
     }
 }
 
