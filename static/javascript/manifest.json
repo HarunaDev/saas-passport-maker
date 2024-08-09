@@ -4,18 +4,6 @@
     "start_url": ".",
     "background_color": "#3c75ef",
     "theme_color": "#3c75ef",
-    "display": "standalone",
-    "icons": [
-        {
-            "src": "src/logo.png",
-            "sizes": "144x144",
-            "type": "image/png"
-        },
-        {
-            "src": "src/logo.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ]
-
+    "display": "standalone"
 }
+
