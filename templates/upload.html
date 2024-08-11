@@ -26,7 +26,7 @@
             Upload an Image to make it a <span style="color: #F2B93F;">passport photograph</span>
         </h1>
 
-        <form action="" method="post">
+        <form action="" method="post" onsubmit="return false;">
             <input type="file" id="file-input" style="display: none;" />
             <button id="upload-button" class="cta-btn">Upload Image</button>
         </form>
@@ -35,4 +35,8 @@
         <small class="tc">By uploading an image you agree to our <br> <a href="">terms of service</a> </small>
     </section>
     <!-- Upload Section end -->
+{% endblock %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='javascript/upload.js') }}"></script>
 {% endblock %}
