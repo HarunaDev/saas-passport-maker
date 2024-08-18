@@ -22,7 +22,11 @@
 {% block main %}
     <section id="removed">
         <div class="left">
-            <img class="removed" src="" alt="">
+            {% if filename %}
+            <img class="removed" src="{{ url_for('static', filename='uploads/' ~ filename) }}" alt="uploaded image">
+            {% else %}
+            <p>No image uploaded.</p>
+            {% endif %}
 
             <!-- blue top svg -->
             <svg class="bt" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -50,8 +54,11 @@
         </div>
 
         <div class="right">
-            <button class="cta-btn">Download Image</button>
-
+            {% if filename %}
+            <a href="{{ url_for('static', filename='uploads/' ~ filename) }}" download="{{ filename }}">
+                <button class="cta-btn">Download Image</button>
+            </a>
+            {% endif %}
             <h5 class="img-text">600 x 800px</h5>
         </div>
     </section>

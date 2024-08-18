@@ -26,9 +26,9 @@
             Upload an Image to make it a <span style="color: #F2B93F;">passport photograph</span>
         </h1>
 
-        <form action="" method="post" onsubmit="return false;">
-            <input type="file" id="file-input" style="display: none;" />
-            <button id="upload-button" class="cta-btn">Upload Image</button>
+        <form action="{{ url_for('removed') }}" method="post" enctype="multipart/form-data">
+            <input type="file" name="image" accept="image/*" id="file-input" style="display: none;" />
+            <button type="button" id="upload-button" class="cta-btn">Upload Image</button>
         </form>
         
 
