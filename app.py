@@ -1,6 +1,11 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, url_for
+import os
 
 app = Flask(__name__)
+
+# Set a folder to save uploaded images
+UPLOAD_FOLDER = 'static/uploads/'
+app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 # Home route
 @app.route("/")
@@ -14,13 +19,27 @@ def about():
 
 # Product route 
 @app.route("/product")
-def upload():
+def product():
     return render_template("upload.html")
 
-# Product route 
-@app.route("/removed")
+# Removed route
+@app.route("/removed", methods=["GET", "POST"])
 def removed():
-    return render_template("removed.html")
+    if request.method == 'POST':
+        # Handle file upload
+        if 'image' not in request.files:
+            return "No file part", 400
+        
+        file = request.files['image']
+        if file.filename == '':
+            return "No selected file", 400
+        
+        if file:
+            # Save the file and redirect to display
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+            return render_template("removed.html", filename=file.filename)
+
+    return render_template("removed.html", filename=None)
 
 # Help route
 @app.route("/help")
