@@ -56,7 +56,7 @@
         <div class="right">
             {% if filename %}
             <a href="{{ url_for('static', filename='uploads/' ~ filename) }}" download="{{ filename }}">
-                <button class="cta-btn">Download Image</button>
+                <button type="submit" class="cta-btn">Download Image</button>
             </a>
             {% endif %}
             <h5 class="img-text">600 x 800px</h5>
