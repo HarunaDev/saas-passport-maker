@@ -2,12 +2,21 @@ from flask import Flask, render_template, request, redirect, url_for, send_from_
 import os
 import threading
 import time
+from removebg import RemoveBg
+from io import BytesIO
+from PIL import Image
 
 app = Flask(__name__)
 
 # Set a folder to save uploaded images
 UPLOAD_FOLDER = 'static/uploads/'
+PROCESSED_FOLDER = 'static/processed/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+app.config['PROCESSED_FOLDER'] = PROCESSED_FOLDER
+
+# Initialize RemoveBg with your API key
+REMOVE_BG_API_KEY = 'your_remove_bg_api_key'
+remove_bg = RemoveBg(REMOVE_BG_API_KEY, "error.log")
 
 # Home route
 @app.route("/")
@@ -37,21 +46,34 @@ def removed():
             return "No selected file", 400
         
         if file:
-            # Save the file and redirect to display
-            file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
-            file.save(file_path)
-            return render_template("removed.html", filename=file.filename)
+            # Save the file
+            original_file_path = os.path.join(app.config['UPLOAD_FOLDER'], file.filename)
+            file.save(original_file_path)
+
+            # Use remove.bg API to remove the background
+            try:
+                # Upload the image to remove.bg API and get the result
+                result = remove_bg.remove_background_from_img_file(original_file_path)
+                img = Image.open(BytesIO(result))
+                
+                # Save the processed image
+                processed_file_path = os.path.join(app.config['PROCESSED_FOLDER'], file.filename)
+                img.save(processed_file_path)
+
+                return render_template("removed.html", filename=file.filename)
+            except Exception as e:
+                return f"An error occurred while processing the image: {e}", 500
 
     return render_template("removed.html", filename=None)
 
 # Download and delete route
 @app.route("/download/<filename>")
 def download(filename):
-    file_path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    file_path = os.path.join(app.config['PROCESSED_FOLDER'], filename)
     
     if os.path.exists(file_path):
         # Serve the file for download
-        response = send_from_directory(app.config['UPLOAD_FOLDER'], filename, as_attachment=True)
+        response = send_from_directory(app.config['PROCESSED_FOLDER'], filename, as_attachment=True)
         
         # Schedule file deletion after a short delay
         threading.Thread(target=delayed_delete, args=(file_path,)).start()
